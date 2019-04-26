@@ -5,10 +5,6 @@ class Category
 
   index_name "categories-#{Rails.env}"
 
-#  attribute :name,          String, mapping: { type: 'keyword' }
-#  attribute :description,   String, mapping: { type: 'text' }
-#  attribute :metadata_hash, String, mapping: { type: 'text' }
-
   # Determines if the document model needs an update from the repository model
   #
   # @param [Portage::Repository::Category] category_model

@@ -4,8 +4,8 @@ class CreatePackages < ActiveRecord::Migration[5.2]
       t.string :category
       t.string :name
       t.string :name_sort
-      t.string :description
-      t.string :longdescription
+      t.text :description
+      t.text :longdescription
       t.string :homepage
       t.string :license
       t.string :licenses

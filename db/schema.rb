@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_25_210326) do
+ActiveRecord::Schema.define(version: 2019_04_26_143457) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,6 +42,28 @@ ActiveRecord::Schema.define(version: 2019_04_25_210326) do
     t.string "herds"
     t.string "maintainers"
     t.string "useflags"
+    t.string "metadata_hash"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "useflags", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "versions", force: :cascade do |t|
+    t.string "version"
+    t.string "package"
+    t.string "atom"
+    t.integer "sort_key"
+    t.string "subslot"
+    t.string "eapi"
+    t.string "keywords"
+    t.string "masks"
+    t.string "use"
+    t.string "restrict"
+    t.string "properties"
     t.string "metadata_hash"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
