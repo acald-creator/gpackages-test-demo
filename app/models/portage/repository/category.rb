@@ -12,4 +12,4 @@ class Portage::Repository::Category
     @path = path
     @name = path.split('/').last
   end
-  
+end
