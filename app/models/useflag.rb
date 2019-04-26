@@ -5,11 +5,11 @@ class Useflag
 
   index_name "useflags-#{Rails.env}"
 
-  attribute :name,              String, mapping: { type: 'keyword' }
-  attribute :description,       String, mapping: { type: 'text' }
-  attribute :atom,              String, mapping: { type: 'keyword' }
-  attribute :scope,             String, mapping: { type: 'keyword' }
-  attribute :use_expand_prefix, String, mapping: { type: 'keyword' }
+ # attribute :name,              String, mapping: { type: 'keyword' }
+ # attribute :description,       String, mapping: { type: 'text' }
+ # attribute :atom,              String, mapping: { type: 'keyword' }
+ # attribute :scope,             String, mapping: { type: 'keyword' }
+ # attribute :use_expand_prefix, String, mapping: { type: 'keyword' }
 
   def all_fields
     [:name, :description, :atom, :scope, :use_expand_prefix]

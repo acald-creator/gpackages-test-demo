@@ -11,19 +11,19 @@ class Package < ApplicationRecord
     type: 'keyword'
     }
   
-  attribute :category,        String, mapping: raw_fields
-  attribute :name,            String, mapping: raw_fields
-  attribute :name_sort,       String, mapping: raw_fields
-  attribute :atom,            String, mapping: raw_fields
-  attribute :description,     String, mapping: { type: 'text' }
-  attribute :longdescription, String, mapping: { type: 'text' }
-  attribute :homepage,        String, default: [], mapping: raw_fields
-  attribute :license,         String, mapping: raw_fields
-  attribute :licenses,        String, default: [], mapping: raw_fields
-  attribute :herds,           String, default: [], mapping: raw_fields
-  attribute :maintainers,     Array,  default: [], mapping: { type: 'object' }
-  attribute :useflags,        Hash,   default: {}, mapping: { type: 'object' }
-  attribute :metadata_hash,   String, mapping: raw_fields
+#  attribute :category,        String, mapping: raw_fields
+#  attribute :name,            String, mapping: raw_fields
+#  attribute :name_sort,       String, mapping: raw_fields
+#  attribute :atom,            String, mapping: raw_fields
+#  attribute :description,     String, mapping: { type: 'text' }
+#  attribute :longdescription, String, mapping: { type: 'text' }
+#  attribute :homepage,        String, default: [], mapping: raw_fields
+#  attribute :license,         String, mapping: raw_fields
+#  attribute :licenses,        String, default: [], mapping: raw_fields
+#  attribute :herds,           String, default: [], mapping: raw_fields
+#  attribute :maintainers,     Array,  default: [], mapping: { type: 'object' }
+#  attribute :useflags,        Hash,   default: {}, mapping: { type: 'object' }
+#  attribute :metadata_hash,   String, mapping: raw_fields
 
   def category_model
     @category_model ||= Category.find_by(:name, category)

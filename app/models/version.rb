@@ -6,19 +6,19 @@ class Version
 
   index_name "versions-#{Rails.env}"
 
-  attribute :version,       String,  mapping: { type: 'keyword' }
-  attribute :package,       String,  mapping: { type: 'keyword' }
-  attribute :atom,          String,  mapping: { type: 'keyword' }
-  attribute :sort_key,      Integer, mapping: { type: 'integer' }
-  attribute :slot,          String,  mapping: { type: 'keyword' }
-  attribute :subslot,       String,  mapping: { type: 'keyword' }
-  attribute :eapi,          String,  mapping: { type: 'keyword' }
-  attribute :keywords,      String,  mapping: { type: 'keyword' }
-  attribute :masks,         Array,   default: [], mapping: { type: 'object' }
-  attribute :use,           String,  default: [], mapping: { type: 'keyword' }
-  attribute :restrict,      String,  default: [], mapping: { type: 'keyword' }
-  attribute :properties,    String,  default: [], mapping: { type: 'keyword' }
-  attribute :metadata_hash, String,  mapping: { type: 'keyword' }
+#  attribute :version,       String,  mapping: { type: 'keyword' }
+#  attribute :package,       String,  mapping: { type: 'keyword' }
+#  attribute :atom,          String,  mapping: { type: 'keyword' }
+#  attribute :sort_key,      Integer, mapping: { type: 'integer' }
+#  attribute :slot,          String,  mapping: { type: 'keyword' }
+#  attribute :subslot,       String,  mapping: { type: 'keyword' }
+#  attribute :eapi,          String,  mapping: { type: 'keyword' }
+#  attribute :keywords,      String,  mapping: { type: 'keyword' }
+#  attribute :masks,         Array,   default: [], mapping: { type: 'object' }
+#  attribute :use,           String,  default: [], mapping: { type: 'keyword' }
+#  attribute :restrict,      String,  default: [], mapping: { type: 'keyword' }
+#  attribute :properties,    String,  default: [], mapping: { type: 'keyword' }
+#  attribute :metadata_hash, String,  mapping: { type: 'keyword' }
 
   # Returns the keywording state on a given architecture
   #
