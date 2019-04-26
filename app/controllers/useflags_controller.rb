@@ -1,0 +1,2 @@
+class UseflagsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+module UseflagsHelper
+end

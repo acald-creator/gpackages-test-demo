@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
-  resources :categories
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'about', to: 'about#index'
+  
+  root 'index#index'
+  
+  resources :categories, only: [:index, :show, :search] do
+    member do
+      get 'search'
+    end
+  end
+  
+  resources :packages, only: [:index, :show, :search] do
+    collection do
+      get 'search'
+      get 'suggest'
+      get 'resolve'
+      get 'added'
+      get 'updated'
+      get 'stable'
+      get 'keyworded'
+    end
+  end
 end
