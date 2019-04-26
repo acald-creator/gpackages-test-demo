@@ -1,3 +1,6 @@
+require 'active_record'
+ActiveRecord::Base.establish_connection( adapter: 'postgresql', database: ":archive_development:" )
+
 class Version
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks

@@ -1,3 +1,9 @@
+require 'active_record'
+ActiveRecord::Base.establish_connection( adapter: 'postgresql', database: ":archive_development:" )
+ActiveRecord::Schema.define(version: 1) { create_table(:useflags) { |t| t.string :version } }
+
+require 'elasticsearch/model'
+
 class Useflag
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
@@ -93,7 +99,7 @@ class Useflag
       collection.each do |item|
         map[item.name] = item
       end
-
+      
       map
     end
   end

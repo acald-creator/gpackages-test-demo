@@ -1,6 +1,10 @@
+require 'active_record'
+ActiveRecord::Base.establish_connection( adapter: 'postgresql', database: ":archive_development:" )
+
 class Category
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
+  include Kkuleomi::Store::Model
   
 # Determines if the document model needs an update from the repository model
   #
