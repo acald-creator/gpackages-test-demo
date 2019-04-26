@@ -17,3 +17,7 @@ module Archive
     # the framework and any gems in your application.
   end
 end
+
+require 'digest'
+require 'set'
+require 'core_ext/markdown_handler'
